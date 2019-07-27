@@ -29,7 +29,12 @@ for epsilon, the_color in zip(epsilon_array, color_array):
         for time_step in range(num_of_timesteps):
             greedy = np.random.binomial(1, (1 - epsilon))
             if greedy == 1:
-                action_index = np.argmax(estimated_q)
+                max_estimated_q = np.max(estimated_q)
+                indices_max_estimated_q = np.where(estimated_q == max_estimated_q)[0]
+                if len(indices_max_estimated_q) == 1:
+                    action_index = indices_max_estimated_q[0]
+                else:
+                    action_index = np.random.choice(indices_max_estimated_q)
             else:
                 action_index = np.random.choice(k)
 

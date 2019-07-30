@@ -10,7 +10,6 @@ the_variance = 1.0  # the variance of the normal distribution for the true value
 num_of_timesteps = 2000  # number of time steps a bandit problem is run
 epsilon_array = [0.0, 0.01, 0.1]
 color_array = ["black", "red", "blue"]
-epsilon = 0.1  # the probability for epsilon greedy action
 t = range(num_of_timesteps)
 
 for epsilon, the_color in zip(epsilon_array, color_array):

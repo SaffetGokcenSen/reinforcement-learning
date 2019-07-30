@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 k = 10  # number of arms
 m = 2000  # number of different k-bandit problems
-the_mean = 0.0  # the mean of the normal distribution for the true value of the action value function q(t)
-the_variance = 1.0  # the variance of the normal distribution for the true value of the action value function q(t)
+the_mean = 0.0  # the mean of the normal distribution for the true value of the action value function q(a)
+the_variance = 1.0  # the variance of the normal distribution for the true value of the action value function q(a)
 num_of_timesteps = 2000  # number of time steps a bandit problem is run
 epsilon_array = [0.0, 0.01, 0.1]
 color_array = ["black", "red", "blue"]
